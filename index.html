@@ -1,0 +1,44 @@
+<!doctype html> 
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My PDF Viewer</title>
+<script type="text/javascript">
+function openTab(th){window.open(th.name,'_self');}
+</script>
+</head>
+<body>
+     <div id="my_pdf_viewer">
+<h2>My book</h2>
+        <div id="canvas_container">
+            <canvas id="pdf_renderer"></canvas>
+        </div>
+<button onclick="openTab(this)"  name="CV.pdf">View CV</button>
+<div class="stackoverflow" style="color:black;">
+<embed src="./CV.pdf" width="150px" height="100px"/>
+</div>
+        <div id="navigation_controls">
+            <button id="go_previous">Previous</button>
+            <input id="current_page" value="1" type="number"/>
+            <button id="go_next">Next</button>
+        </div>
+        <div id="zoom_controls">  
+            <button id="zoom_in">+</button>
+            <button id="zoom_out">-</button>
+        </div>
+    </div>
+</body>
+<script 
+src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js">
+</script>
+<script>
+    var myState = {
+        pdf: null,
+        currentPage: 1,
+        zoom: 1
+    }
+ 
+    // more code here 
+</script>
+</html>
